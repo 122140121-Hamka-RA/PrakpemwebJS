@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nilai Mahasiswa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Kalkulator Nilai Mahasiswa</h1>
+        
+        <div class="error" id="error"></div>
+
+        <div class="input-group">
+            <label for="tugas">Nilai Tugas (30%)</label>
+            <input type="number" id="tugas" min="0" max="100" placeholder="Masukkan nilai 0-100">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-tugas"></div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="uts">Nilai UTS (30%)</label>
+            <input type="number" id="uts" min="0" max="100" placeholder="Masukkan nilai 0-100">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-uts"></div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="uas">Nilai UAS (40%)</label>
+            <input type="number" id="uas" min="0" max="100" placeholder="Masukkan nilai 0-100">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-uas"></div>
+            </div>
+        </div>
+
+        <button onclick="hitungNilai()">Hitung Nilai</button>
+
+        <div class="hasil" id="hasil">
+            <h2>Hasil Perhitungan</h2>
+            <p id="kontribusi-tugas"></p>
+            <p id="kontribusi-uts"></p>
+            <p id="kontribusi-uas"></p>
+            <p id="nilai-akhir"></p>
+            <p id="nilai-huruf"></p>
+            <p id="status"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
